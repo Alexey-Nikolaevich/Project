@@ -2,7 +2,6 @@ import math
 import random
 
 from pygame import Vector2
-from pygame.event import get
 from Settings import*
 
 
