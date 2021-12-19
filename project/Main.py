@@ -1,6 +1,7 @@
 import pygame
 
 from pygame import Vector2
+from pygame.threads import STOP
 from Settings import*
 from Bird import Bird 
 
@@ -56,7 +57,8 @@ def detect(bird, flock):
     param: bird - current exemplar of class Bird
     param: flock - other elements of class Bird
 
-    return: None
+    return: True if this bird see other birds
+            False if this bird can not see other birds
     
     """
     distance = bird.get_pos().distance_to(flock.get_pos())
@@ -107,11 +109,12 @@ def run():
     return: None
     
     """
-    while True:
+    STOP = False
+    while not STOP:
         screen.fill((50, 50, 50))
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                run = False
+                STOP = True
 
         for bird in birds:
             behavior(bird)
