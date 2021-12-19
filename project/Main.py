@@ -57,8 +57,8 @@ def detect(bird, flock):
     param: bird - current exemplar of class Bird
     param: flock - other elements of class Bird
 
-    return: True if this bird see other birds
-            False if this bird can not see other birds
+    return: True if this bird sees other bird
+            False if this bird does not see other bird
     
     """
     distance = bird.get_pos().distance_to(flock.get_pos())
