@@ -52,7 +52,7 @@ def rule3(bird, flock):
 
 def detect(bird, flock):
     """
-    Find other birds within th efield of view of this bird
+    Find other birds within the field of view of this bird
            
     param: bird - current exemplar of class Bird
     param: flock - other elements of class Bird
